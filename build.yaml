@@ -58,12 +58,12 @@ include:
     ### nice_view START ###
     # nice_nano_v2 + nice_epaper
   - board: nice_nano_v2
-    shield: corne_left nice_view_adapter nice_epaper
+    shield: corne_left nice_view_adapter nice_view
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Corne_View\"
     artifact-name: nice_corne_left_view
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
-    shield: corne_right nice_view_adapter nice_epaper
+    shield: corne_right nice_view_adapter nice_view
     artifact-name: nice_corne_right_view
 
     # puchi_ble_v1 + nice_epaper
@@ -78,7 +78,7 @@ include:
 
     # peripheral_left + nice_nano_v2 + nice_epaper
   - board: nice_nano_v2
-    shield: corne_left_peripheral nice_view_adapter nice_epaper
+    shield: corne_left_peripheral nice_view_adapter nice_view
     artifact-name: nice_corne_left_peripheral_view
 
     # peripheral_left + puchi_ble_v1 + nice_epaper
@@ -130,6 +130,11 @@ include:
     shield: corne_dongle_xiao dongle_display
     cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Xiao_Dongle_O\"
     artifact-name: xiao_corne_dongle_oled
+    snippet: studio-rpc-usb-uart
+  - board: seeeduino_xiao_ble
+    shield: corne_dongle_xiao dongle_display
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Corne_Dongle_Display\"
+    artifact-name: xiao_corne_dongle_display_yads
     snippet: studio-rpc-usb-uart
     # snippet: zmk-usb-logging
     ### Xiao_Dongle END ###
